@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <title>薄肌训练助手</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">v2.0 / 12周锁定版 / Clean Fit + Hiphop兼容</p>
+          <h1>薄肌训练助手</h1>
+        </div>
+        <button class="icon-button" id="resetProgress" title="清空本周打卡">↺</button>
+      </header>
+
+      <nav class="tabs" aria-label="主导航">
+        <button class="tab is-active" data-view="today">今日</button>
+        <button class="tab" data-view="plan">计划</button>
+        <button class="tab" data-view="library">动作库</button>
+        <button class="tab" data-view="log">记录</button>
+        <button class="tab" data-view="check">自检</button>
+      </nav>
+
+      <main>
+        <section id="today" class="view is-active">
+          <div class="panel assistant-panel">
+            <div class="section-title">
+              <h2>执行助手</h2>
+              <span class="pill">可输入：训练日2 / 面拉怎么做 / 分析</span>
+            </div>
+            <div id="chatLog" class="chat-log" aria-live="polite"></div>
+            <form id="coachForm" class="coach-form">
+              <input id="coachInput" type="text" placeholder="例如：训练日2，或者：上斜器械推胸怎么做" autocomplete="off" />
+              <button class="small-button" type="submit">发送</button>
+            </form>
+          </div>
+
+          <div class="panel">
+            <div class="section-title">
+              <h2>五个关键指标</h2>
+              <span class="pill">只看最重要的数据</span>
+            </div>
+            <div id="kpiGrid" class="kpi-grid"></div>
+          </div>
+
+          <div class="panel">
+            <div class="section-title">
+              <h2>今天练什么</h2>
+              <select id="dayPicker" aria-label="选择训练日"></select>
+            </div>
+            <div id="todayWorkout" class="workout-list"></div>
+          </div>
+        </section>
+
+        <section id="plan" class="view">
+          <div class="panel">
+            <div class="section-title">
+              <h2>12周路线</h2>
+              <span class="pill">停止设计，开始执行</span>
+            </div>
+            <div class="phase-grid">
+              <article>
+                <h3>第1-4周</h3>
+              <p>学动作和记录数据。所有动作保留1-3次余力，区分核心稳定层和腹肌视觉层，训练后做恢复拉伸。</p>
+              </article>
+              <article>
+                <h3>第5-8周</h3>
+                <p>在动作稳定的前提下渐进加重。器械推胸、胸托划船、下拉和侧平举是主要进步指标。</p>
+              </article>
+              <article>
+                <h3>第9-12周</h3>
+                <p>保持主动作强度，提高肩中束、背阔、上胸和后束的训练质量。体重目标接近66kg。</p>
+              </article>
+            </div>
+          </div>
+          <div class="panel">
+            <h2>每周安排</h2>
+            <div id="weeklyPlan" class="day-grid"></div>
+          </div>
+        </section>
+
+        <section id="library" class="view">
+          <div class="panel">
+            <div class="section-title">
+              <h2>动作库</h2>
+              <input id="searchBox" type="search" placeholder="搜索：侧平举、面拉、引体..." />
+            </div>
+            <div class="filters" id="filters"></div>
+            <div id="exerciseLibrary" class="exercise-grid"></div>
+          </div>
+        </section>
+
+        <section id="log" class="view">
+          <div class="panel">
+            <div class="section-title">
+              <h2>训练记录</h2>
+              <select id="logWorkoutPicker" aria-label="选择要记录的训练日"></select>
+            </div>
+            <div id="logEditor" class="log-editor"></div>
+          </div>
+          <div class="panel">
+            <div class="section-title">
+              <h2>自动分析</h2>
+              <button id="analyzeButton" class="small-button">更新分析</button>
+            </div>
+            <div id="analysisBox" class="analysis-box"></div>
+          </div>
+        </section>
+
+        <section id="check" class="view">
+          <div class="panel">
+            <h2>开练前60秒自检</h2>
+            <div class="check-list">
+              <label><input type="checkbox" /> 今天只执行计划，不临时加动作。</label>
+              <label><input type="checkbox" /> 推胸先让肩胛稳定，胸主动发力。</label>
+              <label><input type="checkbox" /> 下拉和划船先沉肩、拉肘，不让小臂抢戏。</label>
+              <label><input type="checkbox" /> 侧平举不耸肩，动作变形就降重量。</label>
+              <label><input type="checkbox" /> 腿日保留2-3次余力，不影响 hiphop。</label>
+            </div>
+          </div>
+          <div class="panel">
+            <h2>4周内不再大改计划</h2>
+            <ul class="plain-list">
+              <li>每周记录体重，目标每周上涨0.2-0.3kg。</li>
+              <li>每天蛋白质尽量达到110g以上。</li>
+              <li>每4周拍一次正面、侧面、背面照片。</li>
+              <li>除非疼痛、受伤或恢复明显变差，否则不换主框架。</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="exerciseCardTemplate">
+      <article class="exercise-card">
+        <div class="card-head">
+          <div>
+            <p class="tag"></p>
+            <h3></h3>
+          </div>
+          <button class="small-button done-button">完成</button>
+        </div>
+        <p class="dose"></p>
+        <div class="cue-row"></div>
+        <details>
+          <summary>动作要点和避坑</summary>
+          <div class="details-body"></div>
+        </details>
+        <div class="links"></div>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
