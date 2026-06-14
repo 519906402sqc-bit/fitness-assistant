@@ -69,10 +69,26 @@ const exercises = {
     video: "https://www.youtube.com/results?search_query=low+to+high+cable+fly+proper+form",
     guide: "https://www.muscleandstrength.com/exercises/low-cable-crossover.html"
   },
+  inclineMachineFly: {
+    name: "上斜夹胸器械",
+    category: "胸/上胸",
+    dose: "3组 × 10-15次，优先用你发力感更好的器械",
+    cues: ["上胸收缩", "肩不前顶", "顶峰停"],
+    steps: [
+      "座椅调到手柄轨迹对准上胸，先用轻重量找胸发力。",
+      "手肘保持微弯，像用上胸把两侧手柄向中间合拢。",
+      "顶峰停1秒，慢慢放回到胸有拉伸，不要让肩前侧抢动作。"
+    ],
+    mistakes: ["座椅太低导致肩顶", "重量太大变成推胸", "回程太快失去控制"],
+    alternatives: ["lowCableFly"],
+    note: "你的当前首选：比低位绳索夹胸更适合你的健身房和发力感。",
+    video: "https://www.youtube.com/results?search_query=incline+machine+chest+fly+proper+form",
+    guide: "https://www.nasm.org/exercise-library"
+  },
   dbLateralRaise: {
     name: "哑铃侧平举",
     category: "肩/中束",
-    dose: "4组 × 12-20次",
+    dose: "轻重量技术练习，不用5kg强行做主训练",
     cues: ["手肘带动", "不耸肩", "动作干净"],
     steps: [
       "身体站稳，手肘微弯，肩膀远离耳朵。",
@@ -80,13 +96,14 @@ const exercises = {
       "慢慢下放，重量宁可轻，也不要甩和耸肩。"
     ],
     mistakes: ["斜方肌先酸", "身体甩动", "手腕高过手肘太多"],
+    note: "当前只作为轻重量技术练习；正式训练优先器械或绳索侧平举。",
     video: "https://www.youtube.com/results?search_query=dumbbell+lateral+raise+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
   cableLateralRaise: {
     name: "绳索侧平举",
     category: "肩/中束",
-    dose: "3组 × 12-20次",
+    dose: "与器械侧平举合计5-7组 × 12-20次",
     cues: ["持续张力", "别耸肩", "侧束酸"],
     steps: [
       "滑轮放低，身体微微远离器械，让底部也有张力。",
@@ -94,7 +111,24 @@ const exercises = {
       "底部不要完全松掉，保持侧束有张力。"
     ],
     mistakes: ["耸肩", "甩身体", "重量太大导致轨迹变形"],
+    alternatives: ["dbLateralRaise"],
+    note: "优先使用能保持轨迹和中束发力的最轻档，不为加重牺牲动作。",
     video: "https://www.youtube.com/results?search_query=cable+lateral+raise+proper+form",
+    guide: "https://www.nasm.org/exercise-library"
+  },
+  machineLateralRaise: {
+    name: "器械侧平举",
+    category: "肩/中束",
+    dose: "Day1 与绳索侧平举合计5-7组；Day4 少量2组 × 10-15次",
+    cues: ["中束主导", "不耸肩", "轨迹稳定"],
+    steps: [
+      "调整座椅，让器械轴心和肩关节大致对齐。",
+      "用手肘向外抬起，保持肩膀远离耳朵。",
+      "在动作不变形的范围内控制下放。"
+    ],
+    mistakes: ["斜方肌抢发力", "冲重量缩短幅度", "身体离开靠垫借力"],
+    note: "Day4 最近记录：13.6kg × 10 × 2。动作稳定后先加次数，再小幅加重。",
+    video: "https://www.youtube.com/results?search_query=machine+lateral+raise+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
   tricepsPushdown: {
@@ -114,12 +148,12 @@ const exercises = {
   pullUp: {
     name: "标准引体向上",
     category: "背/背阔",
-    dose: "累计30个，分多组完成，每组保留1次余力",
+    dose: "质量优先，多组完成；参考首组约10次、次组约8次、后续4-6次",
     cues: ["总次数法", "先沉肩", "肘向下"],
     steps: [
       "每组不要做到彻底力竭，第一组通常留1次余力。",
       "从底部开始，但肩不要完全松垮。",
-      "当天状态好就少组完成，状态一般就多组凑够30个。"
+      "后续组在动作质量下降前停止，不强行凑固定总次数。"
     ],
     mistakes: ["第一组冲废", "为了凑次数牺牲全程", "下巴硬凑"],
     video: "https://www.youtube.com/results?search_query=pull+up+proper+form",
@@ -150,6 +184,7 @@ const exercises = {
       "顶部停半秒，慢慢放回到背被拉长。"
     ],
     mistakes: ["胸离垫借力", "下背代偿", "只用手臂弯"],
+    note: "当前10kg更稳定；15kg曾出现右下背抽痛。先检查握把、胸托高度和核心稳定，不允许硬顶重量。",
     video: "https://www.youtube.com/results?search_query=chest+supported+row+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
@@ -184,7 +219,7 @@ const exercises = {
   rearDeltFly: {
     name: "反向飞鸟 / 后束飞鸟",
     category: "肩/后束",
-    dose: "3-4组 × 15-20次",
+    dose: "3-4组 × 12-15次；Day4少量即可",
     cues: ["轻重量", "打开", "不耸肩"],
     steps: [
       "胸贴垫或身体站稳，手肘微弯。",
@@ -212,7 +247,7 @@ const exercises = {
   curl: {
     name: "哑铃弯举",
     category: "手臂/二头",
-    dose: "3组 × 10-12次（Day2）或 2组 × 10-15次（Day4）",
+    dose: "Day2 2-3组 × 10-15次",
     cues: ["肘不跑", "慢下放", "别甩"],
     steps: [
       "身体站稳，肘在身体两侧。",
@@ -237,10 +272,24 @@ const exercises = {
     video: "https://www.youtube.com/results?search_query=leg+press+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
+  hipRaise: {
+    name: "臀举",
+    category: "腿/臀",
+    dose: "20kg × 12次 × 3组",
+    cues: ["臀部主导", "髋稳定", "不顶腰"],
+    steps: [
+      "先用轻重量确认髋部轨迹稳定。",
+      "用臀部发力完成动作，保持肋骨和骨盆受控。",
+      "顶部短暂停顿，回程保持控制。"
+    ],
+    mistakes: ["腰部代偿", "冲重量", "动作后明显影响跳舞"],
+    video: "https://www.youtube.com/results?search_query=weighted+glute+raise+proper+form",
+    guide: "https://www.nasm.org/exercise-library"
+  },
   gluteBridge: {
     name: "臀桥 / 臀推",
     category: "腿/臀",
-    dose: "3组 × 10-12次",
+    dose: "15kg × 12次 × 3组",
     cues: ["臀发力", "别顶腰", "肋骨收"],
     steps: [
       "脚跟踩稳，动作前先轻收肋骨。",
@@ -254,7 +303,7 @@ const exercises = {
   legCurl: {
     name: "坐姿腿弯举",
     category: "腿/后侧链",
-    dose: "3组 × 10-15次",
+    dose: "3组 × 10-15次；最近30kg×12、30kg×15、32.5kg×12",
     cues: ["控制", "后侧发力", "不弹"],
     steps: [
       "膝关节对准器械轴心，垫子固定大腿。",
@@ -262,13 +311,14 @@ const exercises = {
       "回程慢，别让重量砸回去。"
     ],
     mistakes: ["座椅没调好", "借惯性弹", "腰跟着动"],
+    note: "如果大腿后侧酸痛持续到第3天，下次少1组或重量下降5-10%。",
     video: "https://www.youtube.com/results?search_query=seated+leg+curl+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
   calfRaise: {
     name: "提踵",
     category: "腿/小腿",
-    dose: "4组 × 12-20次",
+    dose: "自重 × 20次 × 2组；影响跳舞则减为1组或取消",
     cues: ["顶峰停", "全脚掌稳", "慢下放"],
     steps: [
       "脚掌踩稳，脚跟下降到小腿有拉伸。",
@@ -324,7 +374,7 @@ const exercises = {
   crunchMachine: {
     name: "卷腹凳 / 腹肌卷腹机",
     category: "核心/腹肌视觉",
-    dose: "2-3组 × 10-15次（Day1）或 3组 × 10-15次（Day3）",
+    dose: "3组 × 10-15次；Day3参考30kg×12、30kg×12、35kg×10，Day4重量待记录",
     cues: ["肋骨卷向骨盆", "慢卷慢放", "顶峰停1秒"],
     steps: [
       "先吐气，让肋骨向骨盆方向卷，而不是用脖子硬拉。",
@@ -410,43 +460,66 @@ const exercises = {
 const workouts = [
   {
     id: "day1",
-    name: "Day1 上胸 + 肩中束 + 腹肌",
-    note: "上胸主导，肩中束高收益。器械先把胸练到位，哑铃只做稳定训练，最后补腹肌视觉。",
-    items: ["warmup", "inclineMachinePress", "inclineDbPress", "lowCableFly", "dbLateralRaise", "cableLateralRaise", "tricepsPushdown", "mcGillCurlUp", "crunchMachine", "recoveryDay1"]
+    name: "Day1 上胸 + 肩中束 + 三头 + 核心",
+    note: "上胸主导；低位绳索夹胸固定3组。侧平举优先器械或绳索，总量5-7组，哑铃只作轻重量技术练习。",
+    items: ["warmup", "inclineMachinePress", "inclineDbPress", "lowCableFly", "machineLateralRaise", "cableLateralRaise", "tricepsPushdown", "crunchMachine", "recoveryDay1"]
   },
   {
     id: "day2",
-    name: "Day2 背阔 + 后束",
-    note: "背阔、后束和肩胛控制优先。引体用累计30个，不固定8/6/5/4。",
-    items: ["warmup", "pullUp", "latPulldown", "chestSupportedRow", "straightArmPulldown", "rearDeltFly", "facePull", "curl", "recoveryDay2"]
+    name: "Day2 背阔 + 后束 + 二头",
+    note: "动作质量优先，不追引体极限。胸托划船先用稳定的10kg与合适握把；Day2不安排核心，控制训练时长。",
+    items: ["warmup", "pullUp", "latPulldown", "chestSupportedRow", "rearDeltFly", "curl", "recoveryDay2"]
   },
   {
     id: "day3",
-    name: "Day3 功能腿 + 核心",
-    note: "兼容 hiphop，全部保留2-3次余力。前三周不做保加利亚分腿蹲。",
-    items: ["warmup", "legPress", "gluteBridge", "legCurl", "calfRaise", "birdDog", "mcGillCurlUp", "plank", "crunchMachine", "recoveryDay3"]
+    name: "Day3 低酸痛功能腿 + 核心",
+    note: "目标是臀腿功能、髋稳定和核心，不追求传统腿部增肌刺激。若后侧或小腿酸痛持续到第3天，下次自动减量；第二个月后且hiphop不受影响时再考虑保加利亚分腿蹲。",
+    items: ["warmup", "hipRaise", "gluteBridge", "legCurl", "calfRaise", "crunchMachine", "recoveryDay3"]
   },
   {
     id: "day4",
-    name: "Day4 胸厚度 + 背阔强化",
-    note: "平板器械补胸整体厚度，杠铃卧推降级为4周一次测试。",
-    items: ["warmup", "flatMachinePress", "inclineMachinePress", "latPulldown", "seatedRow", "cableLateralRaise", "rearDeltFly", "curl", "tricepsPushdown", "recoveryDay4"]
+    name: "Day4 胸整体厚度 + 背阔强化 + 后束少量 + 核心",
+    note: "杠铃卧推仅作阶段性测试。卷腹机已纠正，不再误记为弯举；辅助双杠臂屈伸只做少量测试，不作固定主项。",
+    items: ["warmup", "flatMachinePress", "inclineMachinePress", "latPulldown", "seatedRow", "machineLateralRaise", "rearDeltFly", "crunchMachine", "recoveryDay4"]
   },
   {
     id: "weekend",
-    name: "周末 家里辅助",
-    note: "灵活性、核心、舞蹈辅助。不练废。",
-    items: ["homeMobility", "birdDog", "mcGillCurlUp", "gluteBridge"]
+    name: "周五 Hiphop",
+    note: "固定课程。周四和当天避免高酸痛腿部训练。",
+    items: ["homeMobility"]
   }
 ];
 
 const kpiItems = [
-  { label: "上斜器械推胸", exerciseId: "inclineMachinePress" },
-  { label: "平板器械推胸", exerciseId: "flatMachinePress" },
-  { label: "引体总次数", exerciseId: "pullUp", type: "reps" },
-  { label: "胸托划船", exerciseId: "chestSupportedRow" },
-  { label: "侧平举", exerciseIds: ["dbLateralRaise", "cableLateralRaise"] }
+  { label: "上斜器械推胸", exerciseId: "inclineMachinePress", baseline: "25kg × 10" },
+  { label: "平板器械推胸", exerciseId: "flatMachinePress", baseline: "35kg × 11" },
+  { label: "引体质量参考", exerciseId: "pullUp", type: "reps", baseline: "首组约10次" },
+  { label: "胸托划船", exerciseId: "chestSupportedRow", baseline: "10kg稳定" },
+  { label: "侧平举", exerciseIds: ["machineLateralRaise", "cableLateralRaise", "dbLateralRaise"], baseline: "器械13.6kg × 10" }
 ];
+
+const recentBaselines = {
+  day2: {
+    pullUp: "首组约10次、次组约8次、后续4-6次",
+    chestSupportedRow: "10kg稳定；15kg曾右下背抽痛"
+  },
+  day3: {
+    hipRaise: "20kg × 12 × 3",
+    gluteBridge: "15kg × 12 × 3",
+    legCurl: "30kg×12、30kg×15、32.5kg×12",
+    calfRaise: "自重 × 20 × 2",
+    crunchMachine: "30kg×12、30kg×12、35kg×10"
+  },
+  day4: {
+    flatMachinePress: "35kg×11、35kg×9、35kg×8",
+    inclineMachinePress: "25kg×10、25kg×10、25kg×9",
+    latPulldown: "35kg×12、40kg×12、45kg×10、45kg×8",
+    seatedRow: "30kg × 12 × 3",
+    machineLateralRaise: "13.6kg × 10 × 2",
+    rearDeltFly: "器械3-4组，重量待记录",
+    crunchMachine: "重量待记录（已纠正为卷腹机）"
+  }
+};
 
 const nonLogItems = new Set([
   "warmup",
@@ -459,8 +532,10 @@ const nonLogItems = new Set([
 
 const progressKey = "lean-muscle-training-progress-v2";
 const logKey = "lean-muscle-training-logs-v2";
+const feedbackKey = "lean-muscle-training-feedback-v1";
 const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
 const trainingLogs = JSON.parse(localStorage.getItem(logKey) || "{}");
+const trainingFeedback = JSON.parse(localStorage.getItem(feedbackKey) || "{}");
 let selectedCategory = "全部";
 
 function saveProgress() {
@@ -469,6 +544,10 @@ function saveProgress() {
 
 function saveLogs() {
   localStorage.setItem(logKey, JSON.stringify(trainingLogs));
+}
+
+function saveFeedback() {
+  localStorage.setItem(feedbackKey, JSON.stringify(trainingFeedback));
 }
 
 function getDateKey(offset = 0) {
@@ -482,15 +561,82 @@ function parseNumber(value) {
   return Number.isFinite(number) ? number : 0;
 }
 
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 function getExerciseSets(dateKey, workoutId, exerciseId) {
   trainingLogs[dateKey] ||= {};
   trainingLogs[dateKey][workoutId] ||= {};
   trainingLogs[dateKey][workoutId][exerciseId] ||= Array.from({ length: 4 }, () => ({
     weight: "",
     reps: "",
-    rest: ""
+    rest: "",
+    rpe: ""
   }));
   return trainingLogs[dateKey][workoutId][exerciseId];
+}
+
+function getDailyFeedback(dateKey, workoutId) {
+  trainingFeedback[dateKey] ||= {};
+  const defaults = {
+    completion: "full",
+    blocked: "",
+    feel: "",
+    targetFeel: "",
+    pain: "",
+    danceImpact: "none",
+    sorenessDays: "0",
+    fatigue: "normal",
+    nextFocus: ""
+  };
+  trainingFeedback[dateKey][workoutId] = {
+    ...defaults,
+    ...(trainingFeedback[dateKey][workoutId] || {})
+  };
+  return trainingFeedback[dateKey][workoutId];
+}
+
+function getExerciseRecommendation(workoutId, exerciseId) {
+  const entries = collectExerciseEntries(exerciseId);
+  const latest = entries[entries.length - 1];
+  const baseline = recentBaselines[workoutId]?.[exerciseId];
+  if (!latest) return baseline || "按动作质量选择，保留1-2次余力";
+
+  const exercise = exercises[exerciseId];
+  const lowerMatch = exercise.dose.match(/(\d+)\s*-\s*(\d+)次/);
+  const upper = lowerMatch ? Number(lowerMatch[2]) : 12;
+  const lower = lowerMatch ? Number(lowerMatch[1]) : 8;
+  const latestLoad = latest.weight ? `${latest.weight}kg` : "自重";
+  if (latest.reps < lower && latest.rpe >= 9) return `${latestLoad}降一档，先回到目标次数`;
+  if (latest.reps >= upper && (!latest.rpe || latest.rpe <= 9)) return `${latestLoad}动作稳定则小幅加重`;
+  return baseline || `${latest.weight ? `${latest.weight}kg` : "自重"}继续，先稳定增加次数`;
+}
+
+function hasMeaningfulFeedback(feedback) {
+  return feedback.completion !== "full"
+    || feedback.blocked
+    || feedback.feel
+    || feedback.targetFeel
+    || feedback.pain
+    || feedback.danceImpact === "yes"
+    || parseNumber(feedback.sorenessDays)
+    || feedback.fatigue !== "normal"
+    || feedback.nextFocus;
+}
+
+function getLatestFeedback(workoutId, fallbackDateKey) {
+  const current = getDailyFeedback(fallbackDateKey, workoutId);
+  if (hasMeaningfulFeedback(current)) return current;
+  const latestDate = Object.keys(trainingFeedback)
+    .filter((dateKey) => dateKey !== fallbackDateKey && trainingFeedback[dateKey]?.[workoutId])
+    .sort()
+    .at(-1);
+  return latestDate ? getDailyFeedback(latestDate, workoutId) : current;
 }
 
 function collectExerciseEntries(exerciseIds) {
@@ -508,7 +654,8 @@ function collectExerciseEntries(exerciseIds) {
             exerciseId,
             weight: parseNumber(set.weight),
             reps,
-            rest: parseNumber(set.rest)
+            rest: parseNumber(set.rest),
+            rpe: parseNumber(set.rpe)
           });
         });
       });
@@ -540,7 +687,7 @@ function renderKpis() {
   grid.innerHTML = "";
   kpiItems.forEach((item) => {
     const entries = collectExerciseEntries(item.exerciseIds || item.exerciseId);
-    const current = summarizeEntries(entries, item.type);
+    const current = entries.length ? summarizeEntries(entries, item.type) : item.baseline;
     const dates = [...new Set(entries.map((entry) => entry.dateKey))];
     const previousDate = dates.length > 1 ? dates[dates.length - 2] : "";
     const previousEntries = previousDate ? entries.filter((entry) => entry.dateKey === previousDate) : [];
@@ -575,6 +722,8 @@ function createExerciseCard(id, workoutId = "library") {
     <ul>${exercise.steps.map((step) => `<li>${step}</li>`).join("")}</ul>
     <strong>常见错误</strong>
     <ul>${exercise.mistakes.map((mistake) => `<li>${mistake}</li>`).join("")}</ul>
+    ${exercise.note ? `<strong>个人调整</strong><p>${exercise.note}</p>` : ""}
+    ${exercise.alternatives ? `<strong>可替换动作</strong><p>${exercise.alternatives.map((altId) => exercises[altId].name).join(" / ")}</p>` : ""}
   `;
 
   node.querySelector(".links").innerHTML = `
@@ -632,6 +781,61 @@ function renderPlan() {
   });
 }
 
+function createAdjustmentTips(workoutId, dateKey = getDateKey()) {
+  const feedback = getLatestFeedback(workoutId, dateKey);
+  const tips = [];
+  const blockedText = feedback.blocked.trim();
+  const feelText = `${feedback.feel} ${feedback.targetFeel}`.trim();
+  const focusText = feedback.nextFocus.trim();
+  const fatigue = feedback.fatigue;
+  const painText = feedback.pain.trim();
+  const sorenessDays = parseNumber(feedback.sorenessDays);
+
+  if (feedback.completion === "partial") {
+    tips.push("今天没有完整完成也没关系：下次同训练日先补主动作，孤立动作按时间删减。");
+  } else if (feedback.completion === "missed") {
+    tips.push("今天基本没完成：下一次不要叠加补课，直接从原计划主动作重新开始。");
+  }
+
+  if (blockedText.includes("占") || blockedText.includes("排队") || blockedText.includes("没位置")) {
+    tips.push("器械被占时按同肌群替换：低位绳索夹胸 ↔ 上斜夹胸器械，胸托划船 ↔ 坐姿划船，高位下拉 ↔ 引体辅助/直臂下压。");
+  }
+
+  if (feelText.includes("夹胸") || feelText.includes("上斜夹胸")) {
+    tips.push("Day1上胸孤立动作优先保留低位绳索夹胸3组；器械被占或发力明显更差时再做同肌群替换。");
+  }
+
+  if (feelText.includes("绳索侧平举") || feelText.includes("5kg") || feelText.includes("侧平举")) {
+    tips.push("肩中束优先器械或绳索，总量5-7组；哑铃只用轻重量练轨迹，不强行用5kg。");
+  }
+
+  if (painText.includes("下背") || painText.includes("腰") || feelText.includes("下背") || feelText.includes("抽痛")) {
+    tips.push("出现下背抽痛：立即降重量，检查握把、胸托高度和核心稳定；胸托划船先回到稳定的10kg。");
+  } else if (painText) {
+    tips.push("已记录疼痛：尖锐疼痛、抽痛或关节不适时立刻降重量或替换动作，不硬顶。");
+  }
+
+  if (feelText.includes("小臂") || feelText.includes("握力")) {
+    tips.push("小臂先酸、背部没感觉：下次减轻握力代偿，调整握法，必要时考虑拉力带。");
+  }
+
+  if (sorenessDays >= 3 || feedback.danceImpact === "yes") {
+    tips.push("酸痛持续到第3天或影响跳舞：下次Day3少1组，腿弯举重量下降5-10%，提踵减为1组或取消。");
+  }
+
+  if (fatigue === "high") {
+    tips.push("下次训练总量降一档：每个孤立动作少1组，主动作保留2-3次余力。");
+  } else if (fatigue === "low") {
+    tips.push("如果动作质量稳定，下次主动作可以尝试每组多1-2次，暂时不急着加重量。");
+  }
+
+  if (focusText) {
+    tips.push(`下次重点：${focusText}`);
+  }
+
+  return tips;
+}
+
 function renderFilters() {
   const categories = ["全部", ...new Set(Object.values(exercises).map((exercise) => exercise.category.split("/")[0]))];
   const filters = document.querySelector("#filters");
@@ -686,7 +890,7 @@ function renderLogEditor(workoutId = workouts[0].id) {
           <button class="small-button" type="button" data-add-set="${exerciseId}">加一组</button>
         </div>
         <div class="set-grid">
-          <span>组</span><span>重量kg</span><span>次数</span><span>休息秒</span>
+          <span>组</span><span>重量kg</span><span>次数</span><span>休息秒</span><span>RPE</span>
         </div>
         <div class="sets"></div>
       `;
@@ -700,6 +904,7 @@ function renderLogEditor(workoutId = workouts[0].id) {
           <input inputmode="decimal" aria-label="${exercise.name} 第${index + 1}组重量" value="${set.weight}" data-log="${exerciseId}:${index}:weight" />
           <input inputmode="numeric" aria-label="${exercise.name} 第${index + 1}组次数" value="${set.reps}" data-log="${exerciseId}:${index}:reps" />
           <input inputmode="numeric" aria-label="${exercise.name} 第${index + 1}组休息" value="${set.rest}" data-log="${exerciseId}:${index}:rest" />
+          <input inputmode="decimal" aria-label="${exercise.name} 第${index + 1}组RPE" value="${set.rpe || ""}" data-log="${exerciseId}:${index}:rpe" />
         `;
         setsNode.appendChild(row);
       });
@@ -714,20 +919,102 @@ function renderLogEditor(workoutId = workouts[0].id) {
       });
 
       card.querySelector("[data-add-set]").addEventListener("click", () => {
-        sets.push({ weight: "", reps: "", rest: "" });
+        sets.push({ weight: "", reps: "", rest: "", rpe: "" });
         saveLogs();
         renderLogEditor(workout.id);
       });
 
       container.appendChild(card);
     });
+
+  const feedback = getDailyFeedback(dateKey, workout.id);
+  const feedbackCard = document.createElement("article");
+  feedbackCard.className = "log-card feedback-card";
+  feedbackCard.innerHTML = `
+    <div class="card-head">
+      <div>
+        <p class="tag">训练反馈</p>
+        <h3>今天实际完成情况</h3>
+        <p class="dose">记录主观难度、目标肌肉感觉、疼痛和跳舞影响，分析会据此调整下一次训练。</p>
+      </div>
+    </div>
+    <label>
+      完成度
+      <select data-feedback="completion">
+        <option value="full">基本完成</option>
+        <option value="partial">部分完成</option>
+        <option value="missed">基本没练</option>
+      </select>
+    </label>
+    <label>
+      受限原因 / 器械占用
+      <textarea data-feedback="blocked" placeholder="例如：低位绳索被占，改做上斜夹胸器械；今天时间只够练前4个动作。">${escapeHtml(feedback.blocked)}</textarea>
+    </label>
+    <label>
+      动作发力感 / 无法完成
+      <textarea data-feedback="feel" placeholder="例如：上斜夹胸器械发力更好；绳索侧平举5kg做不了，哑铃4kg可以。">${escapeHtml(feedback.feel)}</textarea>
+    </label>
+    <label>
+      目标肌肉感觉
+      <textarea data-feedback="targetFeel" placeholder="例如：上胸发力清晰；下拉时小臂先酸、背阔感觉弱。">${escapeHtml(feedback.targetFeel)}</textarea>
+    </label>
+    <label>
+      疼痛或关节不适
+      <textarea data-feedback="pain" placeholder="例如：胸托划船15kg时右下背抽痛；无疼痛。">${escapeHtml(feedback.pain)}</textarea>
+    </label>
+    <label>
+      是否影响跳舞 / 第二天状态
+      <select data-feedback="danceImpact">
+        <option value="none">不影响</option>
+        <option value="yes">影响跳舞或第二天状态</option>
+      </select>
+    </label>
+    <label>
+      酸痛持续天数
+      <input inputmode="numeric" data-feedback="sorenessDays" value="${escapeHtml(feedback.sorenessDays)}" placeholder="0" />
+    </label>
+    <label>
+      疲劳感
+      <select data-feedback="fatigue">
+        <option value="normal">正常</option>
+        <option value="high">偏疲劳</option>
+        <option value="low">状态很好</option>
+      </select>
+    </label>
+    <label>
+      下次想优先解决
+      <input data-feedback="nextFocus" value="${escapeHtml(feedback.nextFocus)}" placeholder="例如：先抢胸托划船；侧平举保持动作干净。" />
+    </label>
+    <div class="adjustment-box"></div>
+  `;
+
+  feedbackCard.querySelector('[data-feedback="completion"]').value = feedback.completion;
+  feedbackCard.querySelector('[data-feedback="fatigue"]').value = feedback.fatigue;
+  feedbackCard.querySelector('[data-feedback="danceImpact"]').value = feedback.danceImpact;
+  feedbackCard.querySelectorAll("[data-feedback]").forEach((field) => {
+    field.addEventListener("input", (event) => {
+      feedback[event.target.dataset.feedback] = event.target.value;
+      saveFeedback();
+      renderAdjustmentPreview(feedbackCard, workout.id, dateKey);
+    });
+  });
+  renderAdjustmentPreview(feedbackCard, workout.id, dateKey);
+  container.appendChild(feedbackCard);
+}
+
+function renderAdjustmentPreview(card, workoutId, dateKey) {
+  const tips = createAdjustmentTips(workoutId, dateKey);
+  const box = card.querySelector(".adjustment-box");
+  box.innerHTML = tips.length
+    ? tips.map((tip) => `<article>${tip}</article>`).join("")
+    : "<article>反馈保存后，这里会显示下次训练调整建议。</article>";
 }
 
 function analyzeTraining() {
   const articles = [];
   const loggedKpis = kpiItems.map((item) => {
     const entries = collectExerciseEntries(item.exerciseIds || item.exerciseId);
-    return { ...item, entries, current: summarizeEntries(entries, item.type) };
+    return { ...item, entries, current: entries.length ? summarizeEntries(entries, item.type) : item.baseline };
   });
 
   if (loggedKpis.every((item) => item.current === "未记录")) {
@@ -747,6 +1034,21 @@ function analyzeTraining() {
       articles.push(`${item.label}：当前 ${item.current}。${suggestion}`);
     });
   }
+
+  const recentFeedback = Object.entries(trainingFeedback)
+    .flatMap(([dateKey, dayFeedback]) => Object.entries(dayFeedback).map(([workoutId, feedback]) => ({ dateKey, workoutId, feedback })))
+    .sort((a, b) => a.dateKey.localeCompare(b.dateKey))
+    .slice(-3);
+
+  recentFeedback.forEach(({ dateKey, workoutId, feedback }) => {
+    const workout = workouts.find((item) => item.id === workoutId);
+    const tips = createAdjustmentTips(workoutId, dateKey);
+    if (tips.length) {
+      articles.push(`${dateKey} ${workout?.name || "训练"}反馈调整：${tips.join(" ")}`);
+    } else if (feedback.blocked || feedback.feel || feedback.nextFocus) {
+      articles.push(`${dateKey} ${workout?.name || "训练"}反馈已记录：下次保持原计划主框架，只按现场情况做同肌群替换。`);
+    }
+  });
 
   const box = document.querySelector("#analysisBox");
   box.innerHTML = articles.map((text) => `<article>${text}</article>`).join("");
@@ -783,6 +1085,25 @@ function replyToCoach(text) {
   const workoutId = findWorkoutFromText(text);
   const exerciseMatch = findExerciseFromText(text);
 
+  if (text.includes("反馈") || text.includes("没练完") || text.includes("被占") || text.includes("做不了")) {
+    const targetWorkoutId = workoutId || document.querySelector("#logWorkoutPicker").value || workouts[0].id;
+    const dateKey = getDateKey();
+    const feedback = getDailyFeedback(dateKey, targetWorkoutId);
+    if (text.includes("没练完") || text.includes("只练") || text.includes("来不及")) feedback.completion = "partial";
+    if (text.includes("基本没练") || text.includes("没练成")) feedback.completion = "missed";
+    if (text.includes("被占") || text.includes("排队") || text.includes("没位置")) feedback.blocked = text;
+    if (text.includes("发力") || text.includes("做不了") || text.includes("5kg") || text.includes("4kg") || text.includes("夹胸") || text.includes("侧平举")) feedback.feel = text;
+    if (text.includes("累") || text.includes("疲劳")) feedback.fatigue = "high";
+    if (text.includes("状态好") || text.includes("轻松")) feedback.fatigue = "low";
+    if (text.includes("疼") || text.includes("痛") || text.includes("关节")) feedback.pain = text;
+    if (text.includes("影响跳舞") || text.includes("影响第二天")) feedback.danceImpact = "yes";
+    if (text.includes("第3天") || text.includes("三天")) feedback.sorenessDays = "3";
+    saveFeedback();
+    renderLogEditor(targetWorkoutId);
+    const tips = createAdjustmentTips(targetWorkoutId, dateKey);
+    return `已记录到今天的训练反馈。\n${tips.length ? tips.join("\n") : "下次仍按原计划执行，现场只做同肌群替换。"}`;
+  }
+
   if (text.includes("分析") || text.includes("建议") || text.includes("调整")) {
     return analyzeTraining();
   }
@@ -795,11 +1116,17 @@ function replyToCoach(text) {
   if (workoutId) {
     const workout = workouts.find((item) => item.id === workoutId);
     selectWorkout(workout.id);
-    const list = workout.items.map((id, index) => `${index + 1}. ${exercises[id].name}：${exercises[id].dose}`).join("\n");
-    return `已切到 ${workout.name}。\n${workout.note}\n\n${list}\n\n练完去“记录”页填重量、次数、休息；首页只追踪五个关键指标。`;
+    const formalItems = workout.items.filter((id) => !nonLogItems.has(id));
+    const list = formalItems.map((id) => {
+      const recommendation = getExerciseRecommendation(workout.id, id);
+      const caution = exercises[id].note || exercises[id].cues.join(" / ");
+      return `${exercises[id].name} / ${exercises[id].dose} / ${recommendation} / ${caution}`;
+    }).join("\n");
+    const adjustments = createAdjustmentTips(workout.id).join("\n") || "暂无需要减量的反馈；所有动作保留1-2次余力，达到次数上限且动作稳定后再小幅加重。";
+    return `1. 今日目标\n${workout.name}。${workout.note}\n\n2. 今日动作表：动作 / 组数次数 / 推荐重量 / 注意事项\n${list}\n\n3. 今日不该做什么\n不主动力竭；不为加重量牺牲动作；出现尖锐疼痛、抽痛或关节不适立即降重或替换；周四和周五不做高酸痛腿部动作。\n\n4. 根据上次记录的自动调整\n${adjustments}\n\n5. 训练后需要我反馈的问题\n请记录每组重量、次数、RPE，以及目标肌肉感觉、是否疼痛、是否影响跳舞或第二天状态。`;
   }
 
-  return "你可以输入：训练日1、训练日2、面拉怎么做、分析。未来4周不再大改计划，只记录和执行。";
+  return "你可以输入：训练日1、训练日2、面拉怎么做、分析，或者直接写：今天反馈：器械被占/动作做不了/只练了一部分。";
 }
 
 function initPickers() {
@@ -855,4 +1182,4 @@ renderLibrary();
 renderLogEditor();
 renderKpis();
 analyzeTraining();
-addChatMessage("coach", "v2.0 已同步：训练日1-4包含正式训练、腹肌视觉层和训练后恢复。你可以输入“训练日1-4”查看当天内容，或输入“分析”查看五个关键指标。");
+addChatMessage("coach", "v2.2 已按最近三周记录修正：保持每周4练 + 周五hiphop，Day3改为低酸痛功能腿，Day4已把误记的弯举纠正为卷腹机。输入“训练日1-4”会按目标、动作表、禁忌、自动调整和训练后反馈问题输出。");

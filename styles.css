@@ -140,13 +140,56 @@ h3 {
 }
 
 select,
-input[type="search"] {
+input[type="search"],
+.feedback-card input,
+.feedback-card textarea,
+.feedback-card select {
   min-height: 40px;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 0 12px;
   background: #fff;
   color: var(--ink);
+}
+
+.feedback-card {
+  display: grid;
+  gap: 12px;
+}
+
+.feedback-card label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.feedback-card textarea {
+  min-height: 78px;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.feedback-card input,
+.feedback-card textarea,
+.feedback-card select {
+  width: 100%;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.adjustment-box {
+  display: grid;
+  gap: 8px;
+  line-height: 1.6;
+}
+
+.adjustment-box article {
+  border-left: 4px solid var(--warm);
+  border-radius: 4px;
+  background: #fff8ee;
+  padding: 10px 12px;
 }
 
 .workout-list,
@@ -398,7 +441,7 @@ summary {
 
 .set-grid {
   display: grid;
-  grid-template-columns: 48px repeat(3, minmax(70px, 1fr));
+  grid-template-columns: 48px repeat(4, minmax(64px, 1fr));
   gap: 8px;
   align-items: center;
 }
@@ -450,7 +493,7 @@ summary {
   }
 
   .set-grid {
-    grid-template-columns: 38px repeat(3, minmax(0, 1fr));
+    grid-template-columns: 32px repeat(4, minmax(0, 1fr));
     gap: 6px;
   }
 
