@@ -16,7 +16,7 @@ const exercises = {
   inclineMachinePress: {
     name: "上斜器械推胸",
     category: "胸/上胸",
-    dose: "4组 × 8-12次（Day1）或 3组 × 8-12次（Day4）",
+    dose: "Day1 4组 × 8-12次；Day4 2组 × 8-12次",
     cues: ["主菜动作", "轨迹到上胸", "胸主动"],
     steps: [
       "座椅调到手柄大约对准上胸，脚踩稳。",
@@ -44,7 +44,7 @@ const exercises = {
   flatMachinePress: {
     name: "平板器械推胸",
     category: "胸/厚度",
-    dose: "3-4组 × 8-12次",
+    dose: "Day4 3组 × 8-12次",
     cues: ["厚度主菜", "稳定发力", "不看杠铃KPI"],
     steps: [
       "座椅调到手柄对准中胸，肩胛稳定。",
@@ -72,7 +72,7 @@ const exercises = {
   inclineMachineFly: {
     name: "上斜夹胸器械",
     category: "胸/上胸",
-    dose: "3组 × 10-15次，优先用你发力感更好的器械",
+    dose: "Day1 3组 × 10-15次，正式替代低位绳索夹胸",
     cues: ["上胸收缩", "肩不前顶", "顶峰停"],
     steps: [
       "座椅调到手柄轨迹对准上胸，先用轻重量找胸发力。",
@@ -80,15 +80,14 @@ const exercises = {
       "顶峰停1秒，慢慢放回到胸有拉伸，不要让肩前侧抢动作。"
     ],
     mistakes: ["座椅太低导致肩顶", "重量太大变成推胸", "回程太快失去控制"],
-    alternatives: ["lowCableFly"],
-    note: "你的当前首选：比低位绳索夹胸更适合你的健身房和发力感。",
+    note: "Day1固定上胸孤立动作，不再安排低位绳索夹胸。",
     video: "https://www.youtube.com/results?search_query=incline+machine+chest+fly+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
   dbLateralRaise: {
     name: "哑铃侧平举",
     category: "肩/中束",
-    dose: "轻重量技术练习，不用5kg强行做主训练",
+    dose: "Day1默认2组 × 12-20次；与器械侧平举合计5-7组",
     cues: ["手肘带动", "不耸肩", "动作干净"],
     steps: [
       "身体站稳，手肘微弯，肩膀远离耳朵。",
@@ -96,30 +95,14 @@ const exercises = {
       "慢慢下放，重量宁可轻，也不要甩和耸肩。"
     ],
     mistakes: ["斜方肌先酸", "身体甩动", "手腕高过手肘太多"],
-    note: "当前只作为轻重量技术练习；正式训练优先器械或绳索侧平举。",
+    note: "不强行使用5kg；作为器械侧平举的补充或器械被占时替换。",
     video: "https://www.youtube.com/results?search_query=dumbbell+lateral+raise+proper+form",
-    guide: "https://www.nasm.org/exercise-library"
-  },
-  cableLateralRaise: {
-    name: "绳索侧平举",
-    category: "肩/中束",
-    dose: "与器械侧平举合计5-7组 × 12-20次",
-    cues: ["持续张力", "别耸肩", "侧束酸"],
-    steps: [
-      "滑轮放低，身体微微远离器械，让底部也有张力。",
-      "手肘带手腕向侧上方抬到肩高附近。",
-      "底部不要完全松掉，保持侧束有张力。"
-    ],
-    mistakes: ["耸肩", "甩身体", "重量太大导致轨迹变形"],
-    alternatives: ["dbLateralRaise"],
-    note: "优先使用能保持轨迹和中束发力的最轻档，不为加重牺牲动作。",
-    video: "https://www.youtube.com/results?search_query=cable+lateral+raise+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
   machineLateralRaise: {
     name: "器械侧平举",
     category: "肩/中束",
-    dose: "Day1 与绳索侧平举合计5-7组；Day4 少量2组 × 10-15次",
+    dose: "Day1默认4组 × 10-15次；与哑铃侧平举合计5-7组",
     cues: ["中束主导", "不耸肩", "轨迹稳定"],
     steps: [
       "调整座椅，让器械轴心和肩关节大致对齐。",
@@ -127,7 +110,7 @@ const exercises = {
       "在动作不变形的范围内控制下放。"
     ],
     mistakes: ["斜方肌抢发力", "冲重量缩短幅度", "身体离开靠垫借力"],
-    note: "Day4 最近记录：13.6kg × 10 × 2。动作稳定后先加次数，再小幅加重。",
+    note: "最近记录13.6kg × 10 × 2。Day4仅在Day1肩中束未完成时临时补2组。",
     video: "https://www.youtube.com/results?search_query=machine+lateral+raise+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
@@ -162,7 +145,7 @@ const exercises = {
   latPulldown: {
     name: "高位下拉",
     category: "背/背阔",
-    dose: "4组 × 8-12次",
+    dose: "Day2 3-4组 × 8-12次；Day4正式组3组 × 8-12次",
     cues: ["先沉肩", "拉肘", "小臂别抢"],
     steps: [
       "坐稳后先让肩远离耳朵。",
@@ -191,7 +174,7 @@ const exercises = {
   seatedRow: {
     name: "坐姿划船",
     category: "背/划船",
-    dose: "3组 × 10-12次",
+    dose: "Day4 2组 × 10-12次；背阔感觉差时才做第3组",
     cues: ["胸不塌", "肘后拉", "控制回程"],
     steps: [
       "坐高，肋骨收住，不要靠后仰拉重量。",
@@ -205,7 +188,7 @@ const exercises = {
   straightArmPulldown: {
     name: "直臂下压",
     category: "背/背阔",
-    dose: "3组 × 12-15次",
+    dose: "可选2组 × 12-15次；仅在背阔发力感差时使用",
     cues: ["腋下发力", "不后仰", "手臂微弯"],
     steps: [
       "滑轮调高，手臂保持微弯。",
@@ -213,13 +196,14 @@ const exercises = {
       "想象用腋下夹住重量，而不是用手臂压。"
     ],
     mistakes: ["肘弯成下拉", "腰往后仰", "肩前顶"],
+    note: "不进入Day2固定计划，不为加入它延长训练。",
     video: "https://www.youtube.com/results?search_query=straight+arm+pulldown+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
   rearDeltFly: {
     name: "反向飞鸟 / 后束飞鸟",
     category: "肩/后束",
-    dose: "3-4组 × 12-15次；Day4少量即可",
+    dose: "Day2 3-4组 × 12-15次；Day4 2组 × 12-15次",
     cues: ["轻重量", "打开", "不耸肩"],
     steps: [
       "胸贴垫或身体站稳，手肘微弯。",
@@ -289,7 +273,7 @@ const exercises = {
   gluteBridge: {
     name: "臀桥 / 臀推",
     category: "腿/臀",
-    dose: "15kg × 12次 × 3组",
+    dose: "第一个训练月：15kg × 12次 × 3组；第二个月由史密斯深蹲替换",
     cues: ["臀发力", "别顶腰", "肋骨收"],
     steps: [
       "脚跟踩稳，动作前先轻收肋骨。",
@@ -298,6 +282,21 @@ const exercises = {
     ],
     mistakes: ["腰椎代偿", "脚离身体太远", "顶部肋骨外翻"],
     video: "https://www.youtube.com/results?search_query=glute+bridge+proper+form",
+    guide: "https://www.nasm.org/exercise-library"
+  },
+  smithSquat: {
+    name: "史密斯深蹲",
+    category: "腿/功能",
+    dose: "第二个月启用：先2组 × 8次，再渐进至3组 × 8-10次",
+    cues: ["保留3次余力", "膝盖跟脚尖", "不影响跳舞"],
+    steps: [
+      "双脚放在杠铃垂直线稍前方，站距约与肩同宽。",
+      "控制下蹲至大腿接近平行，保持膝盖跟随脚尖方向。",
+      "连续两次不影响周五hiphop后，才从2组增加至3组。"
+    ],
+    mistakes: ["第一天就做满3组", "下蹲过深导致骨盆卷起", "酸痛影响跳舞仍继续加量"],
+    note: "从第二个月起替换臀桥，不与臀桥叠加。酸痛持续到第3天或影响跳舞时减组或降重约10%，不恢复臀桥补量。",
+    video: "https://www.youtube.com/results?search_query=smith+machine+squat+proper+form",
     guide: "https://www.nasm.org/exercise-library"
   },
   legCurl: {
@@ -461,8 +460,8 @@ const workouts = [
   {
     id: "day1",
     name: "Day1 上胸 + 肩中束 + 三头 + 核心",
-    note: "上胸主导；低位绳索夹胸固定3组。侧平举优先器械或绳索，总量5-7组，哑铃只作轻重量技术练习。",
-    items: ["warmup", "inclineMachinePress", "inclineDbPress", "lowCableFly", "machineLateralRaise", "cableLateralRaise", "tricepsPushdown", "crunchMachine", "recoveryDay1"]
+    note: "上斜器械夹胸正式替代低位绳索夹胸。肩中束默认器械侧平举4组 + 哑铃侧平举2组，可在总量5-7组内调整。",
+    items: ["warmup", "inclineMachinePress", "inclineDbPress", "inclineMachineFly", "machineLateralRaise", "dbLateralRaise", "tricepsPushdown", "crunchMachine", "recoveryDay1"]
   },
   {
     id: "day2",
@@ -473,14 +472,14 @@ const workouts = [
   {
     id: "day3",
     name: "Day3 低酸痛功能腿 + 核心",
-    note: "目标是臀腿功能、髋稳定和核心，不追求传统腿部增肌刺激。若后侧或小腿酸痛持续到第3天，下次自动减量；第二个月后且hiphop不受影响时再考虑保加利亚分腿蹲。",
+    note: "周三训练。第一个月保留臀桥；第二个月加入史密斯深蹲替换臀桥，不叠加。若酸痛持续到第3天或影响hiphop，下次减组或降重约10%。",
     items: ["warmup", "hipRaise", "gluteBridge", "legCurl", "calfRaise", "crunchMachine", "recoveryDay3"]
   },
   {
     id: "day4",
-    name: "Day4 胸整体厚度 + 背阔强化 + 后束少量 + 核心",
-    note: "杠铃卧推仅作阶段性测试。卷腹机已纠正，不再误记为弯举；辅助双杠臂屈伸只做少量测试，不作固定主项。",
-    items: ["warmup", "flatMachinePress", "inclineMachinePress", "latPulldown", "seatedRow", "machineLateralRaise", "rearDeltFly", "crunchMachine", "recoveryDay4"]
+    name: "Day4 精简胸背补强 + 后束少量 + 核心",
+    note: "固定容量约15组。35kg高位下拉只作热身，不计正式组；Day1肩中束未完成时才临时补器械侧平举2组。",
+    items: ["warmup", "flatMachinePress", "inclineMachinePress", "latPulldown", "seatedRow", "rearDeltFly", "crunchMachine", "recoveryDay4"]
   },
   {
     id: "weekend",
@@ -495,7 +494,7 @@ const kpiItems = [
   { label: "平板器械推胸", exerciseId: "flatMachinePress", baseline: "35kg × 11" },
   { label: "引体质量参考", exerciseId: "pullUp", type: "reps", baseline: "首组约10次" },
   { label: "胸托划船", exerciseId: "chestSupportedRow", baseline: "10kg稳定" },
-  { label: "侧平举", exerciseIds: ["machineLateralRaise", "cableLateralRaise", "dbLateralRaise"], baseline: "器械13.6kg × 10" }
+  { label: "侧平举", exerciseIds: ["machineLateralRaise", "dbLateralRaise"], baseline: "器械13.6kg × 10" }
 ];
 
 const recentBaselines = {
@@ -506,17 +505,17 @@ const recentBaselines = {
   day3: {
     hipRaise: "20kg × 12 × 3",
     gluteBridge: "15kg × 12 × 3",
+    smithSquat: "第二个月从2组 × 8次开始",
     legCurl: "30kg×12、30kg×15、32.5kg×12",
     calfRaise: "自重 × 20 × 2",
     crunchMachine: "30kg×12、30kg×12、35kg×10"
   },
   day4: {
     flatMachinePress: "35kg×11、35kg×9、35kg×8",
-    inclineMachinePress: "25kg×10、25kg×10、25kg×9",
-    latPulldown: "35kg×12、40kg×12、45kg×10、45kg×8",
-    seatedRow: "30kg × 12 × 3",
-    machineLateralRaise: "13.6kg × 10 × 2",
-    rearDeltFly: "器械3-4组，重量待记录",
+    inclineMachinePress: "25kg起步，正式做2组",
+    latPulldown: "35kg热身；正式组40-45kg",
+    seatedRow: "30kg × 12，正式做2组",
+    rearDeltFly: "器械2组，重量待记录",
     crunchMachine: "重量待记录（已纠正为卷腹机）"
   }
 };
@@ -537,6 +536,40 @@ const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
 const trainingLogs = JSON.parse(localStorage.getItem(logKey) || "{}");
 const trainingFeedback = JSON.parse(localStorage.getItem(feedbackKey) || "{}");
 let selectedCategory = "全部";
+
+const plannedSetCounts = {
+  day1: {
+    inclineMachinePress: 4,
+    inclineDbPress: 3,
+    inclineMachineFly: 3,
+    machineLateralRaise: 4,
+    dbLateralRaise: 2,
+    tricepsPushdown: 3,
+    crunchMachine: 3
+  },
+  day2: {
+    pullUp: 4,
+    latPulldown: 4,
+    chestSupportedRow: 4,
+    rearDeltFly: 4,
+    curl: 3
+  },
+  day3: {
+    hipRaise: 3,
+    gluteBridge: 3,
+    legCurl: 3,
+    calfRaise: 2,
+    crunchMachine: 3
+  },
+  day4: {
+    flatMachinePress: 3,
+    inclineMachinePress: 2,
+    latPulldown: 3,
+    seatedRow: 2,
+    rearDeltFly: 2,
+    crunchMachine: 3
+  }
+};
 
 function saveProgress() {
   localStorage.setItem(progressKey, JSON.stringify(progress));
@@ -572,7 +605,8 @@ function escapeHtml(value) {
 function getExerciseSets(dateKey, workoutId, exerciseId) {
   trainingLogs[dateKey] ||= {};
   trainingLogs[dateKey][workoutId] ||= {};
-  trainingLogs[dateKey][workoutId][exerciseId] ||= Array.from({ length: 4 }, () => ({
+  const setCount = plannedSetCounts[workoutId]?.[exerciseId] || 4;
+  trainingLogs[dateKey][workoutId][exerciseId] ||= Array.from({ length: setCount }, () => ({
     weight: "",
     reps: "",
     rest: "",
@@ -798,15 +832,15 @@ function createAdjustmentTips(workoutId, dateKey = getDateKey()) {
   }
 
   if (blockedText.includes("占") || blockedText.includes("排队") || blockedText.includes("没位置")) {
-    tips.push("器械被占时按同肌群替换：低位绳索夹胸 ↔ 上斜夹胸器械，胸托划船 ↔ 坐姿划船，高位下拉 ↔ 引体辅助/直臂下压。");
+    tips.push("器械被占时按同肌群替换：器械侧平举 ↔ 哑铃侧平举，胸托划船 ↔ 坐姿划船，高位下拉 ↔ 引体辅助。");
   }
 
   if (feelText.includes("夹胸") || feelText.includes("上斜夹胸")) {
-    tips.push("Day1上胸孤立动作优先保留低位绳索夹胸3组；器械被占或发力明显更差时再做同肌群替换。");
+    tips.push("Day1固定使用上斜器械夹胸3组，不再安排低位绳索夹胸。");
   }
 
-  if (feelText.includes("绳索侧平举") || feelText.includes("5kg") || feelText.includes("侧平举")) {
-    tips.push("肩中束优先器械或绳索，总量5-7组；哑铃只用轻重量练轨迹，不强行用5kg。");
+  if (feelText.includes("5kg") || feelText.includes("侧平举")) {
+    tips.push("肩中束只用器械或哑铃侧平举，总量5-7组；哑铃不强行用5kg。");
   }
 
   if (painText.includes("下背") || painText.includes("腰") || feelText.includes("下背") || feelText.includes("抽痛")) {
@@ -820,7 +854,15 @@ function createAdjustmentTips(workoutId, dateKey = getDateKey()) {
   }
 
   if (sorenessDays >= 3 || feedback.danceImpact === "yes") {
-    tips.push("酸痛持续到第3天或影响跳舞：下次Day3少1组，腿弯举重量下降5-10%，提踵减为1组或取消。");
+    tips.push("酸痛持续到第3天或影响跳舞：下次Day3少1组或降重约10%，腿弯举减量，提踵减为1组或取消；第二个月史密斯深蹲不恢复臀桥补量。");
+  }
+
+  if (workoutId === "day4") {
+    const day1Feedback = getLatestFeedback("day1", dateKey);
+    const day1Text = `${day1Feedback.blocked} ${day1Feedback.feel} ${day1Feedback.targetFeel} ${day1Feedback.nextFocus}`;
+    if (day1Feedback.completion === "partial" && (day1Text.includes("肩") || day1Text.includes("侧平举"))) {
+      tips.push("Day1肩中束未完成：今天可临时补器械侧平举2组；否则Day4不做侧平举。");
+    }
   }
 
   if (fatigue === "high") {
@@ -948,11 +990,11 @@ function renderLogEditor(workoutId = workouts[0].id) {
     </label>
     <label>
       受限原因 / 器械占用
-      <textarea data-feedback="blocked" placeholder="例如：低位绳索被占，改做上斜夹胸器械；今天时间只够练前4个动作。">${escapeHtml(feedback.blocked)}</textarea>
+      <textarea data-feedback="blocked" placeholder="例如：器械侧平举被占，改做哑铃侧平举；今天时间只够练前4个动作。">${escapeHtml(feedback.blocked)}</textarea>
     </label>
     <label>
       动作发力感 / 无法完成
-      <textarea data-feedback="feel" placeholder="例如：上斜夹胸器械发力更好；绳索侧平举5kg做不了，哑铃4kg可以。">${escapeHtml(feedback.feel)}</textarea>
+      <textarea data-feedback="feel" placeholder="例如：上斜夹胸器械发力清晰；哑铃侧平举5kg做不了，4kg动作稳定。">${escapeHtml(feedback.feel)}</textarea>
     </label>
     <label>
       目标肌肉感觉
@@ -1025,7 +1067,7 @@ function analyzeTraining() {
       let suggestion = "继续记录，等有两次以上数据后再判断趋势。";
       const latest = item.entries[item.entries.length - 1];
       if (latest && item.type === "reps") {
-        suggestion = latest.reps >= 30 ? "如果30个完成质量稳定，下次尝试用更少组完成。" : "继续累计到30个，不要第一组力竭。";
+        suggestion = "继续保持动作质量，不追固定总次数，后续组在动作明显下降前停止。";
       } else if (latest && latest.weight && latest.reps >= 12) {
         suggestion = "下次可以小幅加重量，器械加2.5-5kg，哑铃每边加1kg左右。";
       } else if (latest && latest.reps && latest.reps <= 6) {
@@ -1081,6 +1123,17 @@ function findExerciseFromText(text) {
   return Object.entries(exercises).find(([, exercise]) => text.includes(exercise.name.split(" ")[0]));
 }
 
+function getWorkoutRestrictions(workoutId) {
+  const common = "不主动力竭；不为加重量牺牲动作；出现尖锐疼痛、抽痛或关节不适立即降重或替换。";
+  const specific = {
+    day1: "上胸孤立只执行上斜器械夹胸；肩中束只用器械或哑铃方案，哑铃不强行用5kg。",
+    day2: "不固定加入直臂下压，不安排核心，不为凑引体总次数做到动作变形。",
+    day3: "当前第一个训练月不做史密斯深蹲；第二个月启用后不与臀桥叠加，也不练到影响周五hiphop。",
+    day4: "不固定做侧平举、三头或额外夹胸；仅当Day1肩中束未完成时临时补器械侧平举2组。"
+  };
+  return `${common}${specific[workoutId] || "周四和周五不做高酸痛腿部动作。"}`;
+}
+
 function replyToCoach(text) {
   const workoutId = findWorkoutFromText(text);
   const exerciseMatch = findExerciseFromText(text);
@@ -1123,7 +1176,7 @@ function replyToCoach(text) {
       return `${exercises[id].name} / ${exercises[id].dose} / ${recommendation} / ${caution}`;
     }).join("\n");
     const adjustments = createAdjustmentTips(workout.id).join("\n") || "暂无需要减量的反馈；所有动作保留1-2次余力，达到次数上限且动作稳定后再小幅加重。";
-    return `1. 今日目标\n${workout.name}。${workout.note}\n\n2. 今日动作表：动作 / 组数次数 / 推荐重量 / 注意事项\n${list}\n\n3. 今日不该做什么\n不主动力竭；不为加重量牺牲动作；出现尖锐疼痛、抽痛或关节不适立即降重或替换；周四和周五不做高酸痛腿部动作。\n\n4. 根据上次记录的自动调整\n${adjustments}\n\n5. 训练后需要我反馈的问题\n请记录每组重量、次数、RPE，以及目标肌肉感觉、是否疼痛、是否影响跳舞或第二天状态。`;
+    return `1. 今日目标\n${workout.name}。${workout.note}\n\n2. 今日动作表：动作 / 组数次数 / 推荐重量 / 注意事项\n${list}\n\n3. 今日不该做什么\n${getWorkoutRestrictions(workout.id)}\n\n4. 根据上次记录的自动调整\n${adjustments}\n\n5. 训练后需要我反馈的问题\n请记录每组重量、次数、RPE，以及目标肌肉感觉、是否疼痛、是否影响跳舞或第二天状态。`;
   }
 
   return "你可以输入：训练日1、训练日2、面拉怎么做、分析，或者直接写：今天反馈：器械被占/动作做不了/只练了一部分。";
@@ -1182,4 +1235,4 @@ renderLibrary();
 renderLogEditor();
 renderKpis();
 analyzeTraining();
-addChatMessage("coach", "v2.2 已按最近三周记录修正：保持每周4练 + 周五hiphop，Day3改为低酸痛功能腿，Day4已把误记的弯举纠正为卷腹机。输入“训练日1-4”会按目标、动作表、禁忌、自动调整和训练后反馈问题输出。");
+addChatMessage("coach", "v2.3 已同步最终周计划：Day2保持精简，Day3第二个月用史密斯深蹲替换臀桥，Day4精简为固定15组。输入“训练日1-4”查看动态计划。");

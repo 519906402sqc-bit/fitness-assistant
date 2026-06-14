@@ -1,4 +1,4 @@
-const cacheName = "lean-muscle-training-v2-2";
+const cacheName = "lean-muscle-training-v2-3";
 const assets = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./icon.svg"];
 
 self.addEventListener("install", (event) => {
